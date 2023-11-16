@@ -1,0 +1,58 @@
+// ==UserScript==
+// @name        New script - yrp24.com
+// @namespace   Violentmonkey Scripts
+// @match       https://sinad.yrp24.com/dashboard/*
+// @grant       none
+// @version     1.0
+// @author      -
+// @description 11/16/2023, 1:27:21 PM
+// ==/UserScript==
+
+console.log("Code written by khode alishon \n ");
+
+var taeed = 0;
+document.addEventListener('keydown', (event) => {
+    if(event.ctrlKey && event.key == "Enter") {
+    taeed = document.getElementsByClassName("formElement add")[0]
+
+
+    taeed.click();
+  }
+});
+
+var deleteButton = 0;
+
+
+document.addEventListener('keydown', (event) => {
+    if(event.ctrlKey && event.key == "Delete") {
+    deleteButton = document.getElementsByClassName("formElement delete")[0]
+
+
+    deleteButton.click();
+  }
+});
+
+
+var arzyabyButton = [];
+document.addEventListener('keydown', (event) => {
+
+    var ARZYABY = [];
+    arzyabyButton = document.getElementsByClassName("formElement");
+
+    if(event.key == "Insert") {
+    console.log("INSERT");
+
+    for (var i = 0;i < arzyabyButton.length; i++){
+        if(arzyabyButton[i].textContent =="ارزیابی"){
+          ARZYABY.push(arzyabyButton[i])
+        }
+      }
+  ARZYABY[0].click();
+
+
+  }
+
+
+
+
+});
