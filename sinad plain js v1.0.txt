@@ -45,5 +45,17 @@ document.addEventListener('keydown', (event) => {
 
 
 
+document.addEventListener('keydown', (event) => {
+    if(event.ctrlKey && event.code == "Space") {
+    franshizButton = document.getElementsByClassName("chkApplyFranchise")[0]
+
+
+    franshizButton.click();
+  }
+});
+
+
+
+
 
 });
